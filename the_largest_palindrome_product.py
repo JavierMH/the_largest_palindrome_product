@@ -26,12 +26,23 @@ class LargestPalindromeProduct():
                 '\nPlease enter an integer number between 1 and 100\n'
             )
 
+    def _obtain_number_of_test_cases_by_input(self):
+        while True:
+            number_of_test_cases = input('Enter T\n>>>> ')
+            try:
+                self.constraint_for_number_of_test_cases(
+                    number_of_test_cases
+                )
+            except ValueError as ve:
+                print(ve)
+                continue
+            number_of_test_cases = int(number_of_test_cases)
+            return number_of_test_cases
+
     def run(self):
-        number_of_test_cases = input('Enter T\n>>>> ')
-        self.constraint_for_number_of_test_cases(
-            number_of_test_cases
+        number_of_test_cases = (
+            self._obtain_number_of_test_cases_by_input()
         )
-        number_of_test_cases = int(number_of_test_cases)
         the_largest_palindrome_list = []
         for i in range(number_of_test_cases):
             maximun_limit = int(input('Enter N\n>>>> '))
