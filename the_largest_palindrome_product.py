@@ -14,10 +14,24 @@ class LargestPalindromeProduct():
         print(the_largest_palindrome)
         return the_largest_palindrome
 
+    def constraint_for_number_of_test_cases(self, number_of_test_cases):
+        if isinstance(number_of_test_cases, str):
+            if not number_of_test_cases.isdigit():
+                raise ValueError(
+                    '\nPlease enter an integer number!\n'
+                )
+            number_of_test_cases = int(number_of_test_cases)
+        if number_of_test_cases > 100 or number_of_test_cases < 1:
+            raise ValueError(
+                '\nPlease enter an integer number between 1 and 100\n'
+            )
+
     def run(self):
-        number_of_test_cases = int(input('Enter T\n>>>> '))
-        if number_of_test_cases > 100 and number_of_test_cases < 1:
-            raise ValueError()
+        number_of_test_cases = input('Enter T\n>>>> ')
+        self.constraint_for_number_of_test_cases(
+            number_of_test_cases
+        )
+        number_of_test_cases = int(number_of_test_cases)
         the_largest_palindrome_list = []
         for i in range(number_of_test_cases):
             maximun_limit = int(input('Enter N\n>>>> '))
