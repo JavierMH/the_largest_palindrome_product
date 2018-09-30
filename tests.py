@@ -20,7 +20,7 @@ class ContainersTestCase(unittest.TestCase):
             stacks = LargestPalindromeProduct().run()
         self.assertEqual(stacks, expected_stacks)
 
-    def test_obtain_T_by_input(self):
+    def test_constraint_for_number_of_test_cases(self):
         T_isnt_a_digit_value = "50a"
         T_more_than_permited = 101
         T_less_than_permited = 0
@@ -41,6 +41,21 @@ class ContainersTestCase(unittest.TestCase):
         self.assertIsNone(
             LargestPalindromeProduct().constraint_for_number_of_test_cases(
                 T_in_a_correct_range
+            ),
+            None
+        )
+
+    def test_constraints_for_maximum_limit(self):
+        N_isnt_a_digit_value = '50a'
+        N_in_a_correct_range = '80000'
+
+        with self.assertRaises(ValueError):
+            LargestPalindromeProduct().constraints_for_maximum_limit(
+                N_isnt_a_digit_value
+            )
+        self.assertIsNone(
+            LargestPalindromeProduct().constraints_for_maximum_limit(
+                N_in_a_correct_range
             ),
             None
         )
