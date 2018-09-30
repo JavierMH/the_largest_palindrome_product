@@ -56,3 +56,17 @@ Print the required answer for each test case in a new line.
 101101 is product of 143 and 707 and .
 793397 is product of 869 and 913.
 ```
+
+## How to
+
+To run the program just execute the next command in the shell:
+
+```bash
+python the_largest_palindrome_product.py
+```
+
+To run the test just execute the next command in the shell:
+
+```bash
+python tests.py
+```
