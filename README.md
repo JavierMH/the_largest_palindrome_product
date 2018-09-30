@@ -1,6 +1,14 @@
 # the_largest_palindrome_product
 
-## The largest palindrome product
+This project was made to obtain the largest palindrome product.
+
+**Author: *Javier Molina***
+
+## Technologic Stack
+
+* Python: [Python 3.5.2](https://www.python.org/downloads/release/python-356/)
+
+## Description
 
 ```text
 A palindromic number reads the same both ways. The smallest 6 digit palindrome made from the product of two 3-digit numbers is 101101 = 143 x 707.
